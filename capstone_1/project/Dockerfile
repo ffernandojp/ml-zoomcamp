@@ -21,5 +21,5 @@ COPY ["predict.py", "model.bin", "./"]
 # Expose the port Flask/Gunicorn will run on
 EXPOSE 9696
 
-# Define the command to run the service using Gunicorn [4, 5]
+# Define the command to run the service using Gunicorn
 ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "predict:app"]
